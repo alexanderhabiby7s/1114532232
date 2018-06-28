@@ -1,0 +1,216 @@
+@font-face {
+  font-family: 'BentonSans';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../fonts/BentonSans-Light.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'BentonSans';
+  font-style: normal;
+  font-weight: 700;
+  src: url('../fonts/BentonSans-Bold.ttf') format('truetype');
+}
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: BentonSans;
+  padding: 1em;
+}
+.interest-select{
+	padding-top: 10px;
+	border: none;
+	border-bottom: 1px solid white;
+	width: 450px;
+	background: transparent;
+	color: white;
+	font-family: BentonSans;
+    font-size: 16px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 22px;
+    letter-spacing: normal;
+}
+.interested-in-heading{
+  font-size: 28px;
+}
+.Rectangle {
+  background-image: linear-gradient(to bottom, #e4a42c, #dd7711);
+}
+.Im-interested-in {
+  font-family: BentonSans;
+  font-size: 38px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #ffffff;
+  margin: 0px;
+}
+.Start-Here {
+  font-family: BentonSans;
+  font-size: 16px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 22px;
+  letter-spacing: normal;
+  color: #ffffff;
+  color: white;
+}
+.interest-div{
+	padding: 40px;
+	    height: auto;
+}
+option { 
+    /* Whatever color  you want */
+    background-color: rgba(0, 0, 0, 0.3);
+}
+.flex-control-nav{
+	bottom: 0 !important;
+}
+
+.clearfix:after{
+	content: ".";
+	display: block;
+	clear: both;
+	visibility: hidden;
+	line-height: 0;
+	height: 0;
+}
+
+/* css for quotation slider */
+.LightGradient {
+  background-image: linear-gradient(to bottom, #008fcc, #226ca9);
+}
+.flex-caption { 
+    color: white;
+    position: absolute;
+    padding: 2em;
+    top: 30px;
+    margin-left: 30px;
+	width: 700px;
+}
+.quote-text {
+  font-family: BentonSans;
+  font-size: 38px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #ffffff;
+  color: white;
+}
+.flexslider .slides img{
+	width: 100%;
+    display: block;
+    /* height: auto; */
+    height: 50% !important;
+	width: 30% !important;
+    float: right !important;
+}
+.font-white{
+	color: white;
+}
+.flexslider{
+	//background-image: linear-gradient(to bottom, #e4a42c, #dd7711) !important;
+	background: transparent !important;
+	border : none !important;
+	margin: 0 !important;
+	
+}
+.quote-writer {
+  font-family: BentonSans;
+  font-size: 20px;
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #ffffff;
+  color: white;
+}
+.Learn-more-about {
+  font-family: BentonSans;
+  font-size: 16px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 22px;
+  letter-spacing: normal;
+  color: #ffffff;
+  color: white;
+}
+.font-bold{
+	font-weight: bold !important;
+}
+/* css for quotation slider end */
+
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+	.Im-interested-in {
+	  font-family: BentonSans;
+	  font-size: 24px;
+	  font-weight: normal;
+	  font-style: normal;
+	  font-stretch: normal;
+	  line-height: normal;
+	  letter-spacing: normal;
+	  color: #ffffff;
+	  margin: 0px;
+	}
+	.interest-select{
+		padding-top: 30px;
+		border: none;
+		border-bottom: 1px solid white;
+		width: 100%;
+		background: transparent;
+		color: white;
+		font-family: BentonSans;
+		font-size: 16px;
+		font-weight: normal;
+		font-style: normal;
+		font-stretch: normal;
+		line-height: 22px;
+		letter-spacing: normal;
+	}
+	.flex-caption {
+		color: white;
+		position: absolute;
+		padding: 2em;
+		top: 30px;
+		margin-left: 30px;
+		width: 530px;
+	}
+	.flexslider .slides img{
+		width: 100%;
+		display: block;
+		height: 260px !important;
+		width: 260px !important;
+		float: right !important;
+	}
+}
+
+@media only screen and (min-device-width : 	1365px) and (max-device-width : 1370px) {
+	.flexslider .slides img {
+		width: 100%;
+		display: block;
+		height: 580 !important;
+		width: 580 !important;
+		float: right !important;
+	}
+	.interest-div {
+		padding: 40px;
+		height: auto;
+	}
+	.flex-caption { 
+		color: white;
+		position: absolute;
+		padding: 2em;
+		top: 30px;
+		margin-left: 30px;
+		width: 420px;
+	}
+}

@@ -1,0 +1,136 @@
+<html>
+	<head>
+		<link rel="stylesheet" href="../library/css/flexslider.min.css">
+		<link rel="stylesheet" href="expended-solutions-page.css">
+		<link rel="stylesheet" href="../library/css/flexboxgrid.min.css">
+		<link rel="stylesheet" href="../product-card.css">
+		<link rel="stylesheet" href="interested-in.css">
+	</head>
+<body>
+<div id="interest-in-template" class="Rectangle">
+  <script id="my-template" type="text/x-handlebars-template">
+	  <div id="interest-div" class="interest-div">
+		<span class="Im-interested-in">
+			I'm interested in...
+		</span>
+		<br/>
+		{{> optionsPartial}}
+	
+		{{#if (interestSelected interest)}}
+			{{> (getComponentName componentName)}}
+		{{else}}
+		  {{> expendedInterestListing}}
+		{{/if}}
+	  </div>
+	  
+   </script>
+	<script id="options-partial" type="text/x-handlebars-template">
+		<select class="interest-select" onchange="interestChanged()">
+			<option class="Start-Here">Start here...</option>
+			{{#select interest}}
+				{{#each interests}}
+					<option value="{{value}}" {{#selected}}selected="selected"{{/selected}}>{{value}}</option>
+				{{/each}}
+			{{/select}}
+		</select>
+	</script>
+	<script id="quotation-slider-partial-script" type="text/x-handlebars-template">
+		<div class="flexslider">
+		  <ul class="slides">
+			{{#each quotation}}
+				<li>
+					<div class="flex-caption">
+						<span class="quote-text">"{{quote}}"</span>
+						<br/>
+						-<a class="quote-writer" href="http://www.example.com">{{writer}}</a>
+						<br />
+						<span Learn-more-about>Learn more about <a class="font-white font-bold" href="{{link}}">{{title}}</a></span>
+					</div>
+				  
+				  <img class="slider-image" src="{{image}}" />
+				</li>
+			{{/each}}
+		  </ul>
+		</div>
+  </script>
+  <script id="build-profile-template-script" type="text/x-handlebars-template">
+	  <div id="build-profile-div" class="build-profile-div">
+		
+		<span class="Start-Building-Your">Start Building Your SAP Profile</span><br /><br />
+		<span class="build-profile-content">There are many exciting changes to the SAP devloper experience. Creating a profile is easiest way to experience the new changes today and stay up-to-date on what we have planned to build enhance the platform in the future. </span><br /><br />
+		<span class="New-to-SAP-start-her">New to SAP start here…</span>
+		<a class="text-decoration-none" href="http://example.com">
+			<div class="Rectangle-6">
+			  <p class="Create-a-New-SAP-Acc">Create a New SAP Account</p> 
+			</div>
+		</a>
+		<div class="Rectangle"></div>
+		<p class="Already-have-an-SAP">Already have an SAP account?</p>
+		<a class="text-decoration-none" href="http://example.com">
+			<div class="Rectangle-6">
+			  <p class="Login-to-the-Develop">Login to the Developer Experience</p>  
+			</div>
+		</a>
+	  </div>
+  </script>
+  <script id="expended-interest-listing-partial-template" type="text/x-handlebars-template">
+	<div class="expended-service-view">
+	  <span class="heading">Build innovative, cloud-based enterprise solutions</span>
+	  <br />
+	  <div class="sub-heading"> Trending Tutorials <a class="View-All">//View All</a></div>
+		<br />
+		<div class="Main-Rectangle row" style="margin:0;">
+		  <div class="Rectangle-2 col-md">
+		  </div>
+		  <div class="Rectangle-2 col-md">
+		  </div>
+		</div>
+		<div class="sub-heading"> Related Products <a class="View-All">//View All</a></div>
+		<div class="row">
+			{{#each products}}
+					{{> productCardPartial}}
+			{{/each}}
+		</div>
+		<div class="sub-heading"> Blueprints <a class="View-All">//View All</a></div>
+		{{#each blueprints}}
+			{{>blueprintPartial}}
+		{{/each}}
+		<div class="sub-heading"> Developer Showcase <a class="View-All">//View All</a></div>
+		{{#each devshowcase}}
+			{{>blueprintPartial}}
+		{{/each}}
+	</div>
+  </script>
+  <script id="product-card-partial-template" type="text/x-handlebars-template">
+	<div class="product-card row">
+	  <div class="product-icon-div row middle-xs">
+		<img class="product-icon-img" src="{{productIconImage}}" >
+	  </div>
+	  <div class="col-xs">
+		<H4 class="product-title">{{productTitle}}</H4>
+		<span class="Description">
+		  {{productDescription}}
+		</span>
+	  </div>
+	</div>
+  </script>
+  <script id="bluprint-partial-template" type="text/x-handlebars-template">
+	<div class="row">
+	  <div class="col-xs">
+		<img src="{{image}}" >
+	  </div>
+	  <div class="col-xs">
+		<H4 class="blueprint-title">{{title}}</H4>
+		<div class="blueprint-describtion">
+		  {{description}}
+		</div>
+	  </div>
+	</div>
+  </script>
+  
+</div>
+<script src="../library/js/handlebars.js"></script>
+<script src="../library/js/jquery.min.js" ></script>
+<script src="../library/js/jquery.flexslider-min.js"></script>
+<script src="interested-in.js" ></script> 
+</body>

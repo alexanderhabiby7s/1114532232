@@ -1,0 +1,102 @@
+@font-face {
+  font-family: 'BentonSans';
+  font-style: normal;
+  font-weight: 400;
+  src: url('https://fonts.iu.edu/fonts/benton-sans-regular.eot');
+  src:
+    url('https://fonts.iu.edu/fonts/benton-sans-regular.eot?#iefix') format('embedded-opentype'),
+    url('https://fonts.iu.edu/fonts/benton-sans-regular.woff') format('woff'),
+    url('https://fonts.iu.edu/fonts/benton-sans-regular.ttf') format('truetype'),
+    url('https://fonts.iu.edu/fonts/benton-sans-regular.svg#BentonSansRegular') format('svg');
+}
+
+@font-face {
+  font-family: 'BentonSans';
+  font-style: normal;
+  font-weight: 700;
+  src: url('https://fonts.iu.edu/fonts/benton-sans-bold.eot');
+  src:
+    url('https://fonts.iu.edu/fonts/benton-sans-bold.eot?#iefix') format('embedded-opentype'),
+    url('https://fonts.iu.edu/fonts/benton-sans-bold.woff') format('woff'),
+    url('https://fonts.iu.edu/fonts/benton-sans-bold.ttf') format('truetype'),
+    url('https://fonts.iu.edu/fonts/benton-sans-bold.svg#BentonSansRegular') format('svg');
+}
+.Rectangle-2 {
+  border-radius: 4px;
+  background-color: #ffffff;
+  background-color: white;
+  border: solid 1px #e0e0e0;
+  border: solid 1px bordersGrey;
+}
+.Developer-Resources {
+  font-family: BentonSans;
+  font-size: 20px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #000000;
+  color: black;
+}
+.Developer-Resources-div{
+  padding:40px;
+}
+.ff-bentonsans{
+	font-family: BentonSans;
+}
+.Get-access-to-additi {
+  font-family: BentonSans;
+  font-size: 14px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 18px;
+  letter-spacing: normal;
+  color: #000000;
+  color: black;
+}
+.developer-resources-list-item {
+  font-family: BentonSans;
+  font-size: 18px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #000000;
+  color: black;
+}
+
+* {
+    box-sizing: border-box;
+}
+.column {
+    float: left;
+    width: 45%;
+}
+.padding-left-20{
+	padding-left: 20px;
+}
+.padding-20px{
+	padding: 20px;
+}
+.margin-20{
+	margin:20px;
+}	
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+.view-all {
+  font-family: BentonSans;
+  font-size: 14px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #008fd3;
+  text-decoration: none;
+}

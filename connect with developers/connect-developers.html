@@ -1,0 +1,26 @@
+<html>
+	<head>
+		<link rel="stylesheet" href="connect-developers.css">
+	</head>
+	<body>
+	<div id="interest-in-template" class="">
+	  <script id="my-template" type="text/x-handlebars-template">
+		  <div id="interest-div" class="Rectangle-2 clearfix">
+		  <H4>{{title}}</H4>
+		  <span>
+			{{description}}
+		  </span>
+		  <br />
+		  {{#each social}}
+			<div class="social-icon" style="background:{{color}}">
+			  <img src="{{icon}}">
+			</div>
+		  {{/each}}
+		  </div>
+	   </script>
+	</div>
+		<script src="../library/js/jquery.min.js" ></script>
+	<script src="../library/js/handlebars.js"></script>
+	<script src="connect-developers.js"></script>
+	</body>
+</html>

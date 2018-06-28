@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+	<head>
+	    <meta charset="utf-8">
+	    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<title>Animate Slider jQuery Plugin</title>
+		<!-- Plugin css -->
+		<link rel="stylesheet" href="../library/css/jquery.animateSlider.css">
+		<!-- Demo css -->
+		<link rel="stylesheet" href="../library/css/font-awesome.css">
+		<link rel="stylesheet" href="event-slider.css">
+	</head>
+
+    <body class="event-card">
+	<div id="sap-event-template">
+		<script id="my-template" type="text/x-handlebars-template">
+			<div class="event-card">
+				<ul class="anim-slider">
+
+					{{#each slides}}
+						<li class="anim-slide" style='background:#fff url("{{image}}") 100%/cover;'>
+							<div class="content">
+								<div class="SAP-Events">
+									{{title}}<a href="{{link}}" class="view-all">//View All</a>
+								</div>
+								<div class="title">
+									{{description}}
+								</div>
+								<div class="description">
+									{{detail}}
+								</div>
+							</div>
+							<div class="submit">Learn More</div>
+							<div class="image-overlay"></div>
+						</li>
+					{{/each}}
+
+					<!-- Arrows -->
+					<nav class="anim-arrows">
+						<span class="anim-arrows-prev">
+							<i class="fa fa-angle-left fa-3x"></i>
+						</span>
+						<span class="anim-arrows-next">
+							<i class="fa fa-angle-right fa-3x"></i>
+						</span>
+					</nav>
+					<!-- Dynamically created dots -->
+					
+				</ul>
+			</div>
+		</script>
+	</div>
+
+
+
+		<!-- Bower Depedencies -->
+		<script src="../library/js/jquery.min.js"></script>
+		<script src="../library/js/modernizr.js"></script>	
+		<script src="../library/js/handlebars.js"></script>
+		<!-- Load the plugin -->
+		<script src="../library/js/jquery.animateSlider.js"></script>
+		<script src="event-slider.js"></script>
+    </body>
+</html>

@@ -1,0 +1,38 @@
+<html>
+	<head>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.11/handlebars.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js" ></script>
+		<link rel="stylesheet" href="developer-resources.css">
+
+	</head>
+	<body>
+		<div id="Developer-Resources-template" class="row">
+			<script id="Developer-Resources-template-script" type="text/x-handlebars-template">
+			{{#each card}}
+				<div id="Developer-Resources" class="Developer-Resources-div Rectangle-2 column margin-20">
+					<span class="Developer-Resources">{{title}} <a class="view-all" href="{{viewAllLink}}"> //View All</a></span>
+					<br />
+					<span class="ff-bentonsans">{{description}}</span>
+					<div class="row">
+						<ul class="column padding-left-20">
+						{{#each items.list1}}
+						  <li class="developer-resources-list-item">
+							{{this}}
+						  </li>
+						{{/each}}
+						</ul>
+						<ul class="column padding-left-20">
+						  {{#each items.list2}}
+						  <li class="developer-resources-list-item">
+							{{this}}
+						  </li>
+						  {{/each}}
+						</ul>
+					</div>
+				</div>
+			{{/each}}
+		  </script>
+		</div>
+		<script src="developer-resources.js"></script>
+	</body>
+</html>
