@@ -2,14 +2,14 @@
   font-family: 'BentonSans';
   font-style: normal;
   font-weight: 400;
-  src: url('../fonts/BentonSans-Regular.ttf') format('truetype');
+  src: url('../library/css/fonts/BentonSans-Regular.ttf') format('truetype');
 }
 
 @font-face {
   font-family: 'BentonSans';
   font-style: normal;
   font-weight: 700;
-  src: url('../fonts/BentonSans-Bold.ttf') format('truetype');
+  src: url('../library/css/fonts/BentonSans-Bold.ttf') format('truetype');
 }
 .event-card .anim-slider .anim-dots {
 	width: 100%;
@@ -86,7 +86,7 @@
 	cursor: pointer;
 }
 .anim-slider{
-	height: 200px;
+	height: 11.2em;
 	text-align: left;
 }
 .anim-dots span.anim-dots-this:after{

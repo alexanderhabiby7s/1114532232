@@ -2,61 +2,33 @@
   font-family: 'BentonSans';
   font-style: normal;
   font-weight: 500;
-  src: url('../fonts/BentonSans-Regular.ttf') format('truetype');
+  src: url('../library/css/fonts/BentonSans-Regular.ttf') format('truetype');
 }
 
 @font-face {
   font-family: 'BentonSans';
   font-style: normal;
   font-weight: 700;
-  src: url('../fonts/BentonSans-Bold.ttf') format('truetype');
-}
-@font-face {
-    font-family: 'sap-icons';
-    src: url('../fonts/sap-icons-new.ttf'),
-         url('../fonts/sap-icons-new.eof');
+  src: url('../library/css/fonts/BentonSans-Bold.ttf') format('truetype');
 }
 
-.sap-icons.time-icon {
-    font-family: 'sap-icons';
-}
-
-.sap-icons.time-icon:before {
-    content: "\e02d";
-}
-.sap-icons.blank-tag {
-	font-family: 'sap-icons';
-}
-.sap-icons.blank-tag:before {
-	content: "\e169";
-}
-
-.tutorial-card .card-heading-div{
-  width: 421px;
+.tutorial-border-box .tutorial-card .card-heading-div{
   height: 110px;
   background-color: #008fd3;
   margin: 0;
-  flex-direction: column;
-  justify-content: center;
-}
-.center-div{
-  text-align: center;
-  display: table-cell;
-  vertical-align: middle;
-  margin: 0 auto;
+  top: 50%;
+  padding-top: 17.5px;
 }
 .tutorial-card{
-  width: 421px;
-  height: 292px;
   border-radius: 4px;
   background: white;
 }
-.Rectangle-2 {
+.tutorial-border-box {
   border-radius: 4px;
   background-color: #e9e9e9;
   padding: 40px;
 }
-.Get-Started-With-Our {
+.tutorial-border-box .get-started-title {
   font-family: BentonSans;
   font-size: 38px;
   font-weight: normal;
@@ -67,14 +39,7 @@
   color: #000000;
   margin: 0;
 }
-.start-with-tutorial{
-  
-}
-.w-50{
-  width:50%;
-  float:left;
-}
-.tutorial-card .tutorial-card-content .title {
+.tutorial-border-box .tutorial-card  .tutorial-card-content .title {
   font-family: BentonSans;
   font-size: 18px;
   font-weight: normal;
@@ -84,7 +49,7 @@
   letter-spacing: normal;
   color: #008fd3;
 }
-.tutorial-card .tutorial-card-content .description {
+.tutorial-border-box .tutorial-card  .tutorial-card-content .description {
   font-family: BentonSans;
   font-size: 14px;
   font-weight: normal;
@@ -95,13 +60,14 @@
   color: #000000;
   padding-top: 10px;
 }
-.tutorial-card-content{
+.tutorial-border-box .tutorial-card  .tutorial-card-content{
   padding: 20px;
 }
-.tutorial-card-footer{
+.tutorial-border-box .tutorial-card  .tutorial-card-footer{
 	padding-left: 20px;
+	padding-bottom: 10px;
 }
-.tags {
+.tutorial-border-box .tutorial-card .tutorial-card-footer .tags {
   font-family: BentonSans;
   font-size: 14px;
   font-weight: normal;
@@ -111,13 +77,13 @@
   letter-spacing: normal;
   color: #008fd3;
 }
-.tutorial-card .iconCircle{
-  width: 75px;
-  height: 75px;
-  border-radius: 37.5px;
+.tutorial-border-box .tutorial-card .iconCircle{
+  width: 5em;
+  height: 5em;
+  border-radius: 2.5em;
   background-color: #ffffff;
 }
-.tutorial-card .card-heading-div .level {
+.tutorial-border-box .tutorial-card .card-heading-div .level {
   font-family: BentonSans;
   font-size: 14px;
   font-weight: normal;
@@ -126,5 +92,26 @@
   line-height: 22px;
   letter-spacing: normal;
   color: #ffffff;
-  margin-left: -150px;
+}
+.tutorial-border-box .get-started-description {
+  font-family: BentonSans;
+  font-size: 16px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 22px;
+  letter-spacing: normal;
+  color: #000000;
+
+}
+.tutorial-border-box .our-tutorial-list-elements {
+  font-family: BentonSans;
+  font-size: 18px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #000000;
+  padding-top: 10px;
 }

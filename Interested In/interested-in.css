@@ -2,20 +2,30 @@
   font-family: 'BentonSans';
   font-style: normal;
   font-weight: 400;
-  src: url('../fonts/BentonSans-Light.ttf') format('truetype');
+  src: url('../library/css/fonts/BentonSans-Light.ttf') format('truetype');
 }
 
 @font-face {
   font-family: 'BentonSans';
   font-style: normal;
   font-weight: 700;
-  src: url('../fonts/BentonSans-Bold.ttf') format('truetype');
+  src: url('../library/css/fonts/BentonSans-Bold.ttf') format('truetype');
 }
 body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-family: BentonSans;
-  padding: 1em;
+}
+.row{
+	    margin-right: 0rem;
+    margin-left: 0rem;
+}
+.margin-top-1em{
+	margin-top: 1em;
+}
+.col-padding{
+	padding-right: .3em;
+	padding-left: .3em;
 }
 .interest-select{
 	padding-top: 10px;
@@ -61,8 +71,11 @@ body {
   color: white;
 }
 .interest-div{
+	height: auto;
+}
+.interest-div-content{
 	padding: 40px;
-	    height: auto;
+	background-image: linear-gradient(to bottom, #e4a42c, #dd7711);
 }
 option { 
     /* Whatever color  you want */
@@ -108,7 +121,7 @@ option {
 	width: 100%;
     display: block;
     /* height: auto; */
-    height: 50% !important;
+    height: 73% !important;
 	width: 30% !important;
     float: right !important;
 }
@@ -201,10 +214,6 @@ option {
 		width: 580 !important;
 		float: right !important;
 	}
-	.interest-div {
-		padding: 40px;
-		height: auto;
-	}
 	.flex-caption { 
 		color: white;
 		position: absolute;
@@ -212,5 +221,10 @@ option {
 		top: 30px;
 		margin-left: 30px;
 		width: 420px;
+	}
+}
+@media only screen and (min-device-width : 	1920px) {
+	.interest-div{
+		height: 580px;
 	}
 }

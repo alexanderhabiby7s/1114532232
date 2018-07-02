@@ -1,0 +1,19 @@
+@font-face {
+    font-family: 'sap-icons';
+    src: url('fonts/sap-icons-new.ttf'),
+         url('fonts/sap-icons-new.eof');
+}
+
+.sap-icons.time-icon {
+    font-family: 'sap-icons';
+}
+
+.sap-icons.time-icon:before {
+    content: "\e02d";
+}
+.sap-icons.blank-tag {
+	font-family: 'sap-icons';
+}
+.sap-icons.blank-tag:before {
+	content: "\e169";
+}

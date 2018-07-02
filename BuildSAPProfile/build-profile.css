@@ -21,7 +21,7 @@
     url('https://fonts.iu.edu/fonts/benton-sans-bold.ttf') format('truetype'),
     url('https://fonts.iu.edu/fonts/benton-sans-bold.svg#BentonSansRegular') format('svg');
 }
-.LightGradient {
+.SAP-Profile-LightGradient {
   background-image: linear-gradient(to bottom, #008fcc, #226ca9);
 }
 .Start-Building-Your {
@@ -111,4 +111,11 @@
 }
 .text-decoration-none{
 	text-decoration: none;
+}
+
+@media only screen and (min-device-width : 	1920px) {
+	.SAP-Profile-LightGradient {
+	  background-image: linear-gradient(to bottom, #008fcc, #226ca9);
+	  height: 580px;
+	}
 }

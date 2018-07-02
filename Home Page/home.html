@@ -1,0 +1,347 @@
+<html>
+	<head>
+		<link rel="stylesheet" href="../library/css/flexslider.min.css">
+		<link rel="stylesheet" href="../Interested In/expended-solutions-page.css">
+		<link rel="stylesheet" href="../library/css/flexboxgrid.min.css">
+		<!-- Plugin css -->
+		<link rel="stylesheet" href="../library/css/jquery.animateSlider.css">
+		<!-- Demo css -->
+		<link rel="stylesheet" href="../library/css/font-awesome.css">
+		<link rel="stylesheet" href="../library/css/common.css">
+		<link rel="stylesheet" href="../library/css/sap-icons.css">
+		<link rel="stylesheet" href="../product-card.css">
+		<link rel="stylesheet" href="../Interested In/interested-in.css">
+		<link rel="stylesheet" href="../BuildSAPProfile/build-profile.css">
+		<link rel="stylesheet" href="../Started with tutorial/started-with-tutorial.css">
+		<link rel="stylesheet" href="../event-slider/event-slider.css">
+		<link rel="stylesheet" href="../Developer resources/developer-resources.css">
+		<link rel="stylesheet" href="../connect with developers/connect-developers.css">
+		<link rel="stylesheet" href="home.css">
+	</head>
+	<body>
+	<div id="interest-in-template" class="">
+	  <script id="my-template" type="text/x-handlebars-template">
+		<div class="row">
+			<div class="col-md-8 col-padding">
+				<div id="interest-div" class="interest-div">
+					<div class="interest-div-content">
+						<span class="Im-interested-in">
+							I'm interested in...
+						</span>
+						<br/>
+						{{> optionsPartial}}
+
+						{{#if (interestSelected interest)}}
+						{{> (getComponentName componentName)}}
+						{{else}}
+						{{> expendedInterestListing}}
+						{{/if}}
+					</div>
+				</div>
+				<div class="margin-top-1em">
+					{{> startWithTutorialPartial}}
+				</div>
+				<div class="margin-top-1em">
+					{{> ResourcesPartial}}
+				</div>
+			</div>
+			<div class="col-md-4 col-padding">
+				<div class="SAP-Profile-LightGradient">
+					{{> buildProfilePartial}}
+				</div>
+				<div class="margin-top-1em">
+					{{> SAPEventsPartial}}
+				</div>
+				<div class="margin-top-1em">
+					{{> DevShowcasePartial}}
+				</div>
+				<div class="margin-top-1em">
+					{{> DeveloperSocialConnectPartial}}
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			{{> SAPNewlatterPartial}}
+		</div>
+		  
+	   </script>
+		<script id="options-partial" type="text/x-handlebars-template">
+			<select class="interest-select" onchange="interestChanged()">
+				<option class="Start-Here">Start here...</option>
+				{{#select interest}}
+					{{#each interests}}
+						<option value="{{value}}" {{#selected}}selected="selected"{{/selected}}>{{value}}</option>
+					{{/each}}
+				{{/select}}
+			</select>
+		</script>
+		<script id="quotation-slider-partial-script" type="text/x-handlebars-template">
+			<div class="flexslider">
+			  <ul class="slides">
+				{{#each quotation}}
+					<li>
+						<div class="flex-caption">
+							<span class="quote-text">"{{quote}}"</span>
+							<br/>
+							-<a class="quote-writer" href="http://www.example.com">{{writer}}</a>
+							<br />
+							<span Learn-more-about>Learn more about <a class="font-white font-bold" href="{{link}}">{{title}}</a></span>
+						</div>
+					  
+					  <img class="slider-image" src="{{image}}" />
+					</li>
+				{{/each}}
+			  </ul>
+			</div>
+	  </script>
+	  
+	  <script id="expended-interest-listing-partial-template" type="text/x-handlebars-template">
+		<div class="expended-service-view">
+		  <span class="heading">Build innovative, cloud-based enterprise solutions</span>
+		  <br />
+		  <div class="sub-heading"> Trending Tutorials <a class="View-All">//View All</a></div>
+			<br />
+			<div class="Main-Rectangle row" style="margin:0;">
+			  <div class="Rectangle-2 col-md">
+			  </div>
+			  <div class="Rectangle-2 col-md">
+			  </div>
+			</div>
+			<div class="sub-heading"> Related Products <a class="View-All">//View All</a></div>
+			<div class="row">
+				{{#each products}}
+						{{> productCardPartial}}
+				{{/each}}
+			</div>
+			<div class="sub-heading"> Blueprints <a class="View-All">//View All</a></div>
+			{{#each blueprints}}
+				{{>blueprintPartial}}
+			{{/each}}
+			<div class="sub-heading"> Developer Showcase <a class="View-All">//View All</a></div>
+			{{#each devshowcase}}
+				{{>blueprintPartial}}
+			{{/each}}
+		</div>
+	  </script>
+	  <script id="product-card-partial-template" type="text/x-handlebars-template">
+		<div class="product-card row">
+		  <div class="product-icon-div row middle-xs">
+			<img class="product-icon-img" src="{{productIconImage}}" >
+		  </div>
+		  <div class="col-xs">
+			<H4 class="product-title">{{productTitle}}</H4>
+			<span class="Description">
+			  {{productDescription}}
+			</span>
+		  </div>
+		</div>
+	  </script>
+	  <script id="bluprint-partial-template" type="text/x-handlebars-template">
+		<div class="row">
+		  <div class="col-xs">
+			<img src="{{image}}" >
+		  </div>
+		  <div class="col-xs">
+			<H4 class="blueprint-title">{{title}}</H4>
+			<div class="blueprint-describtion">
+			  {{description}}
+			</div>
+		  </div>
+		</div>
+	  </script>
+	  <script id="build-profile-template-script" type="text/x-handlebars-template">
+		  <div id="build-profile-div" class="build-profile-div">
+			<span class="Start-Building-Your">Start Building Your SAP Profile</span><br /><br />
+			<span class="build-profile-content">There are many exciting changes to the SAP devloper experience. Creating a profile is easiest way to experience the new changes today and stay up-to-date on what we have planned to build enhance the platform in the future. </span><br /><br />
+			<span class="New-to-SAP-start-her">New to SAP start here…</span>
+			<a class="text-decoration-none" href="http://example.com">
+				<div class="Rectangle-6">
+				  <p class="Create-a-New-SAP-Acc">Create a New SAP Account</p> 
+				</div>
+			</a>
+			<div class="Rectangle"></div>
+			<p class="Already-have-an-SAP">Already have an SAP account?</p>
+			<a class="text-decoration-none" href="http://example.com">
+				<div class="Rectangle-6">
+				  <p class="Login-to-the-Develop">Login to the Developer Experience</p>  
+				</div>
+			</a>
+		  </div>
+	  </script>
+	  <script id="start-with-tutorial-template" type="text/x-handlebars-template">
+		<div id="tutorials-div" class="tutorial-border-box row">
+			<div class="col-md">
+				<H1 class="get-started-title">Get Started With Our Tutorials</H1>
+				
+				<span class="get-started-description">Follow step-by-step guides and learn about the capabilities of the products and tools while building your apps.</span>
+				<ul>
+				  <li class="our-tutorial-list-elements">Over 347 Tutorials</li>
+				  <li class="our-tutorial-list-elements">15 Product Areas</li>
+				  <li class="our-tutorial-list-elements">1000+ hours of training</li>
+				</ul>
+			</div>
+			<div class="col-md">
+			  <div class="tutorial-card">
+				<div class="card-heading-div row">
+				  <div class="col-xs-3 col-md-4 col-lg-3 text-align-center">
+					<div class="center-div iconCircle">
+						<img src="../Started with tutorial/tutorial.png" style="width:  60%;">
+					</div>
+				  </div>
+				  <div class="col-xs-9 col-md-8 col-lg-9">
+					<div class="level">
+					  <span>Intermediate</span>
+					  <br />
+					  <span class="sap-icons time-icon"> 30 min.</span>
+					  
+					</div>
+				  </div>
+				</div>
+				<div class="tutorial-card-content">
+				  <div class="title">
+					Use Jupyter Notebook with SAP HANA, express edition
+				  </div>
+				  <div class="description">
+					During this tutorial, you will learn how to install the Jupyter Notebook application on your system and connect it to your SAP HANA, express edition.
+				  </div>
+				</div>
+				<div class="tutorial-card-footer">
+					<span class="sap-icons blank-tag"></span>
+					<span class="tags"> Intermediate, SAP HANA, How to</span>
+				</div>
+			  </div>
+			</div>
+		</div>
+	</script>
+	<script id="sap-events-template-script" type="text/x-handlebars-template">
+		<div class="event-card">
+			<ul class="anim-slider">
+
+				{{#each slides}}
+					<li class="anim-slide" style='background:#fff url("{{image}}") 100%/cover;'>
+						<div class="content">
+							<div class="SAP-Events">
+								{{title}}<a href="{{link}}" class="view-all">//View All</a>
+							</div>
+							<div class="title">
+								{{description}}
+							</div>
+							<div class="description">
+								{{detail}}
+							</div>
+						</div>
+						<div class="submit">Learn More</div>
+						<div class="image-overlay"></div>
+					</li>
+				{{/each}}
+
+				<!-- Arrows -->
+				<nav class="anim-arrows">
+					<span class="anim-arrows-prev">
+						<i class="fa fa-angle-left fa-3x"></i>
+					</span>
+					<span class="anim-arrows-next">
+						<i class="fa fa-angle-right fa-3x"></i>
+					</span>
+				</nav>
+				<!-- Dynamically created dots -->
+				
+			</ul>
+		</div>
+	</script>
+	<script id="dev-showcase-partial-template" type="text/x-handlebars-template">
+		<div class="event-card">
+			<ul class="anim-slider">
+				{{#each slides}}
+					<li class="anim-slide" style='background:#fff url("{{image}}") 100%/cover;'>
+						<div class="content">
+							<div class="SAP-Events">
+								{{title}}<a href="{{link}}" class="view-all">//View All</a>
+							</div>
+							<div class="title">
+								{{description}}
+							</div>
+						</div>
+						<div class="submit">Learn More</div>
+						<div class="image-overlay"></div>
+					</li>
+				{{/each}}
+
+				<!-- Arrows -->
+				<nav class="anim-arrows">
+					<span class="anim-arrows-prev">
+						<i class="fa fa-angle-left fa-3x"></i>
+					</span>
+					<span class="anim-arrows-next">
+						<i class="fa fa-angle-right fa-3x"></i>
+					</span>
+				</nav>
+				<!-- Dynamically created dots -->
+			</ul>
+		</div>
+	</script>
+	
+	<script id="Developer-Resources-template-script" type="text/x-handlebars-template">
+		<div class="row">
+			{{#each card}}
+				<div id="Developer-Resources" class="col-sm-6">
+					<div class="Developer-Resources-div Developer-Resources-card">
+						<div class="title">{{title}} <a class="view-all" href="{{viewAllLink}}"> //View All</a></div>
+						<div class="description">{{description}}</div>
+						<div class="row margin-top-1em">
+							<ul class="col-xs">
+							{{#each items.list1}}
+							  <li class="developer-resources-list-item">
+								{{this}}
+							  </li>
+							{{/each}}
+							</ul>
+							{{#if items.list2}}
+								<ul class="col-xs">
+								  {{#each items.list2}}
+								  <li class="developer-resources-list-item">
+									{{this}}
+								  </li>
+								  {{/each}}
+								</ul>
+							{{/if}}
+						</div>
+					</div>
+				</div>
+			{{/each}}
+		</div>
+	</script>
+	
+	<script id="connect-with-developers-partial" type="text/x-handlebars-template">
+		<div id="interest-div" class="social-connect-card clearfix">
+			<H4>{{SocialConnect.title}}</H4>
+			<div>
+				{{SocialConnect.description}}
+			</div>
+			{{#each SocialConnect.social}}
+				<div class="social-icon" style="background:{{color}}">
+					<img src="{{icon}}">
+				</div>
+			{{/each}}
+		</div>
+	</script>
+	
+	<script id="SAP-Newslatter-text-partial" type="text/x-handlebars-template">
+		<div class="SAP-NEWSLETTER-text">
+			<span class="newslatter-icon"></span>SAP NEWSLETTER:  Stay up to date with what is happening at SAP that matters to developers including new trials, tools, tutorials, and more.
+		</div>
+	</script>
+	</div>
+	<script src="../library/js/jquery.min.js" ></script>
+	<script src="../library/js/modernizr.js"></script>
+	<script src="../library/js/handlebars.js"></script>
+	<script src="../library/js/jquery.flexslider-min.js"></script>
+	<!-- Load the plugin -->
+	<script src="../library/js/jquery.animateSlider.js"></script>
+	<!-- <script src="../Interested In/interested-in.js" ></script> -->
+	<!--<script src="../BuildSAPProfile/build-profile.js"></script>
+	<script src="../Started with tutorial/started-with-tutorial.js"></script>
+	<script src="../event-slider/event-slider.js"></script> -->
+	<script src="home.js"></script>
+	</body>
+</html>
